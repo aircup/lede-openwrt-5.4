@@ -71,13 +71,13 @@ jobs:
           sudo timedatectl set-timezone "$TZ"
           df -h
 
-      - name: 加载diy.sh文件
+      - name: 加载diy.sh和feeds.conf.default文件
         run: |
           sed -i 's/\"#src-git\"/\"src-git\"/g' ./feeds.conf.default
           chmod +x $DIY_OP_SH
           $GITHUB_WORKSPACE/$DIY_OP_SH
 
-      - name: 下载diy.sh自定义软件
+      - name: 下载diy.sh和feeds.conf.default自定义插件
         run: ./scripts/feeds update -a
 
       - name: 安装自定义软件
