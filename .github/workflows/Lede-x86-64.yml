@@ -20,7 +20,7 @@ on:
     branches:
       - main
     paths:
-      - '.config'
+      - 'diy.config'
 
 #release发布触发开始编译
 #  release:
