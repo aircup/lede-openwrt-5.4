@@ -36,7 +36,7 @@ on:
 
 env:
   CONFIG_FILE: diy.config
-  DIY_OP_SH: diy.sh
+  DIY_OP_SH: diy-lede.sh
   SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
@@ -69,13 +69,13 @@ jobs:
           sudo timedatectl set-timezone "$TZ"
           df -h
 
-      - name: 加载diy.sh和feeds.conf.default文件
+      - name: 加载diy-lede.sh和feeds.conf.default文件
         run: |
           sed -i 's/\"#src-git\"/\"src-git\"/g' ./feeds.conf.default
           chmod +x $DIY_OP_SH
           $GITHUB_WORKSPACE/$DIY_OP_SH
 
-      - name: 下载diy.sh和feeds.conf.default自定义插件
+      - name: 下载diy-lede.sh和feeds.conf.default自定义插件
         run: ./scripts/feeds update -a
 
       - name: 安装自定义软件
@@ -116,7 +116,7 @@ jobs:
         uses: actions/upload-artifact@main
         if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
         with:
-          name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+          name: OpenWrt_lede_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
           path: ./bin
 
       - name: 整理固件包
@@ -132,7 +132,7 @@ jobs:
         uses: actions/upload-artifact@main
         if: steps.organize.outputs.status == 'success' && !cancelled()
         with:
-          name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+          name: OpenWrt_lede_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
           path: ${{ env.FIRMWARE }}
 
       - name: 上传固件到cowtransfer网盘
