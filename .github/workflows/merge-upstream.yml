@@ -6,17 +6,25 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: Merge-upstream
+name: 同步更新lede源码
 
 on:
-#修改任意文件触发
-#  push:
-#    branches: 
-#      - master
+  repository_dispatch:
 
-#设置时间触发
-#  schedule:
-#    - cron: 30 19 * * *
+#编辑任意指定文件触发开始编译
+#  push:
+#    branches:
+#      - master
+#    paths:
+#      - 'diy.config'
+
+#release发布触发开始编译
+#  release:
+#    types: published
+
+#定时触发开始编译(utc時間)
+# schedule:
+#    - cron: 0 8 2,6,8,30 * *
 
 #点星Star触发开始编译
   watch:
