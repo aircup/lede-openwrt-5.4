@@ -12,22 +12,22 @@ on:
   repository_dispatch:
 
 #编辑任意指定文件触发开始编译
-#  push:
-#    branches:
-#      - master
-#    paths:
-#      - 'diy.config'
+  push:
+    branches:
+      - master
+    paths:
+      - 'diy.config'
 
 #release发布触发开始编译
 #  release:
 #    types: published
 
 #定时触发开始编译(utc時間)
-# schedule:
+#  schedule:
 #    - cron: 0 8 2,6,8,30 * *
 
 #点星Star触发开始编译
-  watch:
+#  watch:
 #    types: started
 
 jobs:
