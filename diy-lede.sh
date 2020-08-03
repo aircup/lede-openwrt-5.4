@@ -44,3 +44,4 @@ git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf  #�
 #git clone https://github.com/lariboo/luci-app-control-mia package/luci-app-control-mia  #时间控制
 #git clone https://github.com/lariboo/luci-app-control-weburl package/luci-app-control-weburl  #网址过滤
 #git clone https://github.com/lariboo/luci-app-control-webrestriction package/luci-app-control-webrestriction  #访问控制
+git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
