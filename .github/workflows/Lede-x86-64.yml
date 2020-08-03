@@ -20,7 +20,7 @@ on:
     branches:
       - main
     paths:
-      - 'diy.config'
+      - 'diy-lede.sh'
 
 #release发布触发开始编译
 #  release:
