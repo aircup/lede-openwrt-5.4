@@ -14,7 +14,7 @@ on:
 #编辑任意指定文件触发开始编译
   push:
     branches:
-      - main
+      - master
     paths:
       - 'diy-lede.sh'
 
