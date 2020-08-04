@@ -16,11 +16,11 @@ on:
   repository_dispatch:
 
 #编辑任意指定文件触发开始编译
-  push:
-    branches:
-      - master
-    paths:
-      - 'diy.config'
+#  push:
+#    branches:
+#      - master
+#    paths:
+#      - 'diy.config'
 
 #release发布触发开始编译
 #  release:
