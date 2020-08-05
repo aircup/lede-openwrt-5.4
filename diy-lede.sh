@@ -71,5 +71,6 @@ svn co https://github.com/firker/diy-ziyong/trunk/theme/luci-theme-opentomcat pa
 
 
 #VSSR修改版（萤火虫）出国软件
+svn co https://github.com/firker/diy-ziyong/trunk/lua-maxminddb package/lua-maxminddb
 svn co https://github.com/firker/diy-ziyong/trunk/luci-app-vssr-plus package/luci-app-vssr-plus
 svn co https://github.com/firker/diy-ziyong/trunk/vssr package/vssr
