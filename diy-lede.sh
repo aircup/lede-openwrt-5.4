@@ -50,6 +50,8 @@ git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf  #�
 #git clone https://github.com/lariboo/luci-app-control-weburl package/luci-app-control-weburl  #网址过滤
 #git clone https://github.com/lariboo/luci-app-control-webrestriction package/luci-app-control-webrestriction  #访问控制
 
+
+#passwall出国软件
 svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-passwall package/luci-app-passwall
 svn co https://github.com/Lienol/openwrt-package/trunk/package/brook package/brook
 svn co https://github.com/Lienol/openwrt-package/trunk/package/chinadns-ng package/chinadns-ng
@@ -58,5 +60,16 @@ svn co https://github.com/Lienol/openwrt-package/trunk/package/trojan-go package
 svn co https://github.com/Lienol/openwrt-package/trunk/package/trojan-plus package/trojan-plus
 svn co https://github.com/Lienol/openwrt-package/trunk/package/syncthing package/syncthing
 
+
+#京东签到
 git clone https://github.com/jerrykuku/node-request.git package/node-request
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
+
+
+#主题
+svn co https://github.com/firker/diy-ziyong/trunk/theme/luci-theme-opentomcat package/luci-theme-opentomcat
+
+
+#VSSR修改版（萤火虫）出国软件
+svn co https://github.com/firker/diy-ziyong/trunk/luci-app-vssr-plus package/luci-app-vssr-plus
+svn co https://github.com/firker/diy-ziyong/trunk/vssr package/vssr
