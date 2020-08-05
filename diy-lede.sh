@@ -27,7 +27,6 @@ sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz
 
 git clone -b 18.06 https://github.com/garypang13/luci-theme-edge package/luci-theme-edge  #主题-edge-动态登陆界面
 
-rm -rf ./package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon  #主题-argon-可自行修改静态和动态登陆界面
 #全新的登录界面,图片背景跟随Bing.com，每天自动切换
 #增加可自定义登录背景功能，请自行将文件上传到/www/luci-static/argon/background 目录下，支持jpg png gif格式图片，主题将会优先显示自定义背景，多个背景为随机显示，系统默认依然为从bing获取
@@ -59,5 +58,5 @@ svn co https://github.com/Lienol/openwrt-package/trunk/package/trojan-go package
 svn co https://github.com/Lienol/openwrt-package/trunk/package/trojan-plus package/trojan-plus
 svn co https://github.com/Lienol/openwrt-package/trunk/package/syncthing package/syncthing
 
-sed -i '$a src-git jerryk https://github.com/jerrykuku/openwrt-package' feeds.conf.default
-rm -rf ./package/lean/luci-theme-argon-18.06
+git clone https://github.com/jerrykuku/node-request.git package/node-request
+git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
