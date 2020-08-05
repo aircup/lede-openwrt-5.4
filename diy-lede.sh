@@ -58,3 +58,6 @@ svn co https://github.com/Lienol/openwrt-package/trunk/package/tcping package/tc
 svn co https://github.com/Lienol/openwrt-package/trunk/package/trojan-go package/trojan-go
 svn co https://github.com/Lienol/openwrt-package/trunk/package/trojan-plus package/trojan-plus
 svn co https://github.com/Lienol/openwrt-package/trunk/package/syncthing package/syncthing
+
+sed -i '$a src-git jerryk https://github.com/jerrykuku/openwrt-package' feeds.conf.default
+rm -rf ./package/lean/luci-theme-argon-18.06
