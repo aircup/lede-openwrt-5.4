@@ -62,5 +62,5 @@ svn co https://github.com/Lienol/openwrt-package/trunk/package/syncthing package
 
 
 #京东签到
-sed -i '$a src-git jerrykuku https://github.com/jerrykuku/luci-theme-argon.git' feeds.conf.default
+sed -i '$a src-git jerryk https://github.com/jerrykuku/openwrt-package' feeds.conf.default
 
