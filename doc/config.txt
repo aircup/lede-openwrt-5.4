@@ -1,0 +1,11 @@
+本地提取 .config 方法
+
+ git pull
+ ./scripts/feeds update -a
+ ./scripts/feeds install -a
+
+然后执行 make menuconfig 选好配置
+
+make defconfig
+./scripts/diffconfig.sh > seed.config
+cat seed.config
