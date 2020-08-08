@@ -31,7 +31,7 @@ on:
 #    - cron: 0 8 2,6,8,30 * *
 
 #点星Star触发开始编译
-#  watch:
+  watch:
 #    types: started
 
 env:
