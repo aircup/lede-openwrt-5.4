@@ -6,7 +6,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: 同步更新lede源码
+name: 同步更新源码
 
 on:
   repository_dispatch:
@@ -23,12 +23,13 @@ on:
 #    types: published
 
 #定时触发开始编译(utc時間)
-#  schedule:
+# schedule:
 #    - cron: 0 8 2,6,8,30 * *
 
 #点星Star触发开始编译
   watch:
 #    types: started
+
 
 jobs:
   merge:
@@ -65,5 +66,5 @@ jobs:
 
     - name: Push Commits
       env:
-        DOWNSTREAM_BRANCH: master
+        DOWNSTREAM_BRANCH: dev-19.07
       run: git push origin $DOWNSTREAM_BRANCH
